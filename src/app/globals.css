@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+body {
+  background-color: white;
+}
+
+.top-bg {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  box-shadow: 0 12px 28px 0 rgba(0, 0, 0, 0.05);
+}
+
+.logo-custom-fill {
+  fill: #ff4c4c !important; /* Change this to any color you want */
+}
+
+.logo-custom-fill path {
+  fill: #ff4c4c !important; /* This targets all path elements inside the SVG */
+}
+.cta-bg {
+  background: linear-gradient(
+    0deg,
+    #f0f0f0 0%,
+    rgba(255, 255, 255, 0.45) 50%,
+    #fff 100%
+  );
+}
+
+/* Project icon hover effects */
+.project-icon-hover svg path {
+  transition: fill 0.3s ease;
+}
+
+.group:hover .project-icon-hover svg path {
+  fill: #ff4d4d !important;
+}
+
+.group:hover .project-icon-hover svg {
+  fill: #ff4d4d !important;
+}
+.line-bg{
+  background: linear-gradient(90deg, #E0E0E0 0%, rgba(224, 224, 224, 0.00) 100%);
+}
