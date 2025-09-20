@@ -198,7 +198,7 @@ export const HeroHeader = () => {
                   </Button>
                 </div>
 
-                <div
+                {/* <div
                   className={`fixed top-[72px] left-0 right-0 bottom-0 z-[1000] bg-black/80 backdrop-blur-md transition-all duration-300 lg:hidden ${
                     menuState ? "opacity-100 visible" : "opacity-0 invisible"
                   }`}
@@ -250,7 +250,7 @@ export const HeroHeader = () => {
                       </ul>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
