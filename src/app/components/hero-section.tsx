@@ -3,9 +3,9 @@ import { OOLogo, OrangeArrow } from "./ui/icons";
 
 export default function HeroSection() {
   return (
-    <section className=" relative md:h-[1313px] h-screen  w-full  bg-[#272528]  overflow-hidden">
+    <section className=" relative md:h-[1313px] h-[100dvh]  w-full  bg-[#272528]  overflow-hidden">
       {/* Video Background */}
-      <div className="mt-[200px] flex justify-center items-center flex-col">
+      <div className="mt-[200px] md:mt-[400px] flex justify-center items-center flex-col ">
         <div className="md:p-[5px] p-1 rounded-[16px] top-bg relative overflow-hidden">
           <div className="w-10 h-10 bg-[#AFAEB2] opacity-[0.4] blur-[8px] absolute -top-[25px] -right-[15px]"></div>
           <div className="w-10 h-10 bg-[#AFAEB2] opacity-[0.4] blur-[6px] absolute -bottom-[36px] -left-[18px]"></div>
@@ -16,24 +16,32 @@ export default function HeroSection() {
             </h5>
           </div>
         </div>
-        <div className="text-center ">
-          <h1 className="md:text-[96px] text-[40px] md:leading-[112px] leading-[56px] text-white">
-            A decentralized
-          </h1>
-          <div className="flex items-center md:gap-4 gap-2 md:mt-2 -mt-6">
+        <div className="flex flex-col justify-center items-center h-full">
+          <div className="text-center md:mt-8">
             <h1 className="md:text-[96px] text-[40px] md:leading-[112px] leading-[56px] text-white">
-              truth
+              A decentralized
             </h1>
-            <div className="md:mt-4 mt-2">
-              {" "}
-              <OOLogo className="w-20 md:w-auto" />
+            <div className="flex items-center md:gap-4 gap-2 md:mt-2 -mt-6">
+              <h1 className="md:text-[96px] text-[40px] md:leading-[112px] leading-[56px] text-white">
+                truth
+              </h1>
+              <div className="md:mt-4 mt-2">
+                {" "}
+                <OOLogo className="w-20 md:w-auto" />
+              </div>
+              <h1 className="md:text-[96px] text-[40px] md:leading-[112px] leading-[56px] text-white">
+                machine
+              </h1>
             </div>
-            <h1 className="md:text-[96px] text-[40px] md:leading-[112px] leading-[56px] text-white">
-              machine
-            </h1>
+          </div>
+          <div className="md:px-0 px-4 md:mt-2">
+            {" "}
+            <h2 className="md:text-xl text-[30px] -mt-6 md:mt-2  md:mx-auto md:max-w-[min(562px,80%)] text-center text-white/70 leading-[2.25rem] md:leading-[1.75rem]">
+              UMA&apos; s optimistic oracle (OO) can record any verifiable truth
+              or data onto a blockchain.
+            </h2>
           </div>
         </div>
-       
       </div>
       <div className="absolute w-full bottom-0 left-0 right-0">
         <video
@@ -69,10 +77,7 @@ export default function HeroSection() {
               </h1>
             </div>
           </div>
-          <h2 className="md:text-xl text-[30px] -mt-6 md:mt-2  mx-auto md:max-w-[min(562px,80%)] text-center text-white/70 leading-[2.25rem] md:leading-[1.75rem]">
-            UMA&apos; s optimistic oracle (OO) can record any verifiable truth
-            or data onto a blockchain.
-          </h2>
+       
         </div>
       </div> */}
 
