@@ -35,7 +35,7 @@ line-height: 28px; /* 182.671% */]"
     },
     {
       id: "crosschain",
-      name: "Cross-Chain Communication",
+      name: "Cross-Chain ",
       icon: <CrossChainIcon />,
     },
     {
@@ -164,7 +164,7 @@ contract ParametricInsurance {
         };
       case "crosschain":
         return {
-          title: "Cross-Chain Communication",
+          title: "Cross-Chain ",
           description:
             "Enable secure cross-chain communication and data verification using UMA's optimistic oracle. Bridge data between different blockchain networks.",
           question: "Is the transaction hash valid on Ethereum mainnet?",
