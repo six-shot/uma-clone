@@ -4,7 +4,7 @@ import { HeroHeader } from "./hero-header";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full bg-[#272528] overflow-hidden md:h-[1313px] h-[100dvh">
+    <section className="relative w-full bg-[#272528] overflow-hidden md:h-[1313px] h-[100dvh]">
       <HeroHeader />
       {/* Video Background */}
       <div className="w-full h-full relative ">
