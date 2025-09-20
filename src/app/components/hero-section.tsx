@@ -5,7 +5,7 @@ export default function HeroSection() {
   return (
     <section className="relative w-full bg-[#272528] overflow-hidden">
       {/* Video Background */}
-      <div className="w-full md:h-[1313px] h-screen relative ">
+      <div className="w-full md:h-[1313px] h-[100dvh] relative ">
         {" "}
         <div className="absolute w-full bottom-0 ">
           <video
