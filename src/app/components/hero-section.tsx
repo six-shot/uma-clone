@@ -60,7 +60,7 @@ export default function HeroSection() {
       </div>
 
       {/* Explore indicator */}
-      <div className="absolute bottom-[190px] left-1/2 transform -translate-x-1/2 z-20 animate-fade-in">
+      <div className="absolute md:bottom-[190px] bottom-14 left-1/2 transform -translate-x-1/2 z-20 animate-fade-in">
         <div className=" flex-col gap-2 w-[48px] h-[48px] rounded-lg bg-[#252125] border border-[#FF4D4D] flex justify-center items-center">
           <OrangeArrow />
         </div>
