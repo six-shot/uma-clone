@@ -3,9 +3,9 @@ import { OOLogo, OrangeArrow } from "./ui/icons";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full bg-[#272528] md:h-full h-[100dvh] overflow-hidden">
+    <section className="relative w-full bg-[#272528] overflow-hidden md:h-full min-h-[90dvh]">
       {/* Video Background */}
-      <div className="w-full md:h-[1313px] h-[100dvh] relative overflow-hidden  ">
+      <div className="w-full md:h-[1313px] h-full relative overflow-hidden ">
         {" "}
         <div className="absolute w-full bottom-0 ">
           <video
@@ -23,7 +23,7 @@ export default function HeroSection() {
       </div>
 
       {/* Hero Text Content */}
-      <div className="absolute md:top-[400px] top-[160px] left-1/2 transform -translate-x-1/2  z-20 animate-fade-in">
+      <div className="relative md:pt-[400px] pt-[160px] pb-20 flex justify-center z-20 animate-fade-in md:px-0 px-5">
         <div className="flex flex-col gap-8 justify-center items-center h-full">
           <div className="md:p-[5px] p-1 rounded-[16px] top-bg relative overflow-hidden">
             <div className="w-10 h-10 bg-[#AFAEB2] opacity-[0.4] blur-[8px] absolute -top-[25px] -right-[15px]"></div>
@@ -60,7 +60,7 @@ export default function HeroSection() {
       </div>
 
       {/* Explore indicator */}
-      <div className="absolute md:bottom-[190px] bottom-14 left-1/2 transform -translate-x-1/2 z-20 animate-fade-in">
+      <div className="relative flex justify-center pb-14 z-20 animate-fade-in">
         <div className=" flex-col gap-2 w-[48px] h-[48px] rounded-lg bg-[#252125] border border-[#FF4D4D] flex justify-center items-center">
           <OrangeArrow />
         </div>
