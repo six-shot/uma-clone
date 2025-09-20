@@ -16,8 +16,9 @@ export default function TopNav({ onClose }: TopNavProps) {
             <div className="w-8 h-8 bg-[rgba(255,77,77,0.10)] rounded-full flex justify-center items-center">
               <TimeIcon />
             </div>
-            <h5 className="text-sm text-[#E0E0E0] leading-6">
-              Time to commit vote:{" "}
+            <h5 className="md:text-sm text-base text-[#E0E0E0] leading-6 flex items-center gap-1">
+              <span className="md:flex hidden"> Time to commit vote: </span>
+              <span className="md:flex block"> reveal votes: </span>
               <span className="text-[15px] text-white">17:03:01</span>
             </h5>
           </div>
@@ -26,7 +27,9 @@ export default function TopNav({ onClose }: TopNavProps) {
           </h5>
         </div>
         <div className="flex items-center">
-          <h5 className="md:block hidden text-sm text-[#E0E0E0] leading-6">More details</h5>
+          <h5 className="md:block hidden text-sm text-[#E0E0E0] leading-6">
+            More details
+          </h5>
           <div className="w-6 h-6 flex justify-center items-center rotate-150">
             <IoArrowBack className="text-[18px] text-[#e0e0e0]" />
           </div>

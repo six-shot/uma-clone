@@ -14,13 +14,11 @@ export default function Home() {
     <div className="font-[family-name:var(--font-halyard-display)]">
       <HeroHeader />
       <HeroSection />
-      
       <HowItWorksSection />
       <Voter />
       <Builder />
       <Feature1 />
       <Projects />
-
       <CTA />
       <Footer />
     </div>

@@ -103,7 +103,7 @@ export const HeroHeader = () => {
         )}
         <div
           className={`transition-all duration-500 ease-in-out ${
-            isTopNavVisible && !isDismissed ? "mt-1" : "-mt-[74px]"
+            isTopNavVisible && !isDismissed ? "-mt-1" : "-mt-[74px]"
           }`}
         >
           <div
@@ -149,13 +149,13 @@ export const HeroHeader = () => {
                     </div>
                   </div>
                   <div className="hidden lg:block">
-                    <ul className="flex gap-1">
+                    <ul className="flex gap-7">
                       {menuItems.map((item, index) => (
                         <li key={index} className="relative">
                           {item.hasDropdown ? (
                             <button
                               onClick={() => handleDropdownToggle(item.name)}
-                              className={`hover:text-[#AFAEB2] duration-150 flex items-center gap-1 pl-4 text-[15px] ${
+                              className={`hover:text-[#AFAEB2] duration-150 flex items-center gap-1  text-[18px] ${
                                 pathname === item.href
                                   ? "text-[#AFAEB2]"
                                   : "text-[#AFAEB2]"
@@ -174,7 +174,7 @@ export const HeroHeader = () => {
                           ) : (
                             <Link
                               href={item.href}
-                              className={`hover:text-[#AFAEB2] duration-150 flex items-center gap-1 pl-4 text-[15px] ${
+                              className={`hover:text-[#AFAEB2] duration-150 flex items-center gap-1 pl-4 text-[18px] ${
                                 pathname === item.href
                                   ? "text-[#AFAEB2]"
                                   : "text-[#AFAEB2]"

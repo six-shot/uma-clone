@@ -39,20 +39,20 @@ export default function HeroSection() {
             <h1 className="md:text-[96px] text-[40px] md:leading-[112px] leading-[56px] text-white">
               A decentralized
             </h1>
-            <div className="flex items-center gap-4 mt-2">
+            <div className="flex items-center md:gap-4 gap-2 md:mt-2 -mt-6">
               <h1 className="md:text-[96px] text-[40px] md:leading-[112px] leading-[56px] text-white">
                 truth
               </h1>
-              <div className="mt-4">
+              <div className="md:mt-4 mt-2">
                 {" "}
-                <OOLogo />
+                <OOLogo className="w-20 md:w-auto" />
               </div>
               <h1 className="md:text-[96px] text-[40px] md:leading-[112px] leading-[56px] text-white">
                 machine
               </h1>
             </div>
           </div>
-          <h2 className="md:text-xl text-[30px]  mx-auto max-w-[min(562px,80%)] text-center text-white/70">
+          <h2 className="md:text-xl text-[30px] -mt-6 md:mt-2  mx-auto md:max-w-[min(562px,80%)] text-center text-white/70 leading-[2.25rem] md:leading-[1.75rem]">
             UMA&apos; s optimistic oracle (OO) can record any verifiable truth
             or data onto a blockchain.
           </h2>

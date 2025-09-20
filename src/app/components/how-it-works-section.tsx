@@ -123,13 +123,13 @@ export default function HowItWorksSection() {
   }, [sections]);
 
   return (
-    <div className=" py-24">
+    <div className="py-[92px] md:py-24 px-4 lg:px-0">
       <div className="max-w-[1148px] mx-auto">
         <div className="flex flex-col gap-8">
           <h2 className="border-b border-grey-400 pb-3 text-lg md:pb-4 md:text-4xl [&>strong]:font-normal [&>strong]:text-red">
             How <span className="text-[#FF4D4D]">UMA</span> works
           </h2>
-          <div className="mb-10 mt-6 w-full text-sm-fluid md:mb-16 md:w-[720px] md:text-md-fluid lg:mb-[96px] leading-[7rem] lg:mt-12 lg:w-[1020px] lg:text-[6rem] xl:mb-[128px] xl:mt-12">
+          <div className="mb-6 md:mt-4 w-full text-2xl md:mb-16 md:w-[720px] text-[2.5rem] lg:mb-[96px] md:leading-[4rem] lg:mt-12 lg:w-[1020px] lg:text-[6rem] lg:leading-[7rem] xl:mb-[128px] xl:mt-12">
             <h2>
               The Optimistic Oracle <br /> verifies data in stages
             </h2>
@@ -138,9 +138,9 @@ export default function HowItWorksSection() {
           {/* Scroll Tracker Container */}
           <div className="relative">
             {/* Left Scroll Tracker */}
-            <div className="absolute left-0 top-0 h-full flex flex-col items-center z-10">
+            <div className="absolute left-0 top-0 h-full lg:flex hidden flex-col items-center z-10">
               {/* Vertical Line */}
-              <div className="h-full w-[1px] bg-[linear-gradient(180deg,#838183_0%,rgba(131,129,131,0.00)_100%)] lg:h-[calc(100%+96px)] relative -z-10">
+              <div className="h-full w-[1px]  bg-[linear-gradient(180deg,#838183_0%,rgba(131,129,131,0.00)_100%)] lg:h-[calc(100%+96px)] relative -z-10">
                 {/* Progress Fill */}
                 <div
                   className="absolute top-0 left-0 w-full bg-[#FF4D4D] transition-all duration-300 ease-out"
@@ -153,7 +153,7 @@ export default function HowItWorksSection() {
                 <div
                   key={section.id}
                   id={`number-${index}`}
-                  className="absolute left-1/2 -translate-x-1/2"
+                  className="absolute left-1/2 -translate-x-1/2 lg:flex hidden"
                   style={{
                     top: `${index * 600}px`, // Initial position, will be updated dynamically
                   }}
@@ -172,36 +172,36 @@ export default function HowItWorksSection() {
             </div>
 
             {/* Content Sections */}
-            <div className="ml-20">
+            <div className="lg:ml-20">
               {sections.map((section, index) => (
                 <div
                   key={section.id}
                   id={`section-${index}`}
-                  className=" flex items-center "
+                  className="flex items-center md:mb-24"
                   style={{
-                    marginBottom: index < sections.length - 1 ? "96px" : "0",
+                    marginBottom: index < sections.length - 1 ? "48px" : "0",
                   }}
                 >
                   <div className="w-full">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-[52px] items-start">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-[52px] items-start md:mt-0 mb-10">
                       {/* Text Content */}
-                      <div className="space-y-[52px]">
+                      <div className="space-y-6 md:space-y-[52px] ">
                         <div className="space-y-4">
-                          <h3 className=" font-medium text-[#FF4D4D] capitalize tracking-wider">
+                          <h3 className=" font-medium md:base text-xs text-[#FF4D4D] capitalize tracking-wider">
                             {section.title}
                           </h3>
-                          <h2 className="text-5xl lg:text-6xl  text-black leading-[1] w-[450px] mt-2 mb-4">
+                          <h2 className="text-3xl md:text-5xl lg:text-6xl text-black leading-[1] w-full max-w-[450px] md:mt-2 md:mb-4">
                             {section.subtitle}
                           </h2>
                         </div>
-                        <p className="text-xl text-gray-600 leading-relaxed max-w-lg">
+                        <p className="text-xl text-[#272528] leading-[1.75rem] max-w-lg">
                           {section.description}
                         </p>
                       </div>
 
                       {/* Video Content */}
                       <div className="flex justify-center lg:justify-end">
-                        <div className="min-h-[400px] border border-grey-400 md:max-w-[754px] lg:max-w-[520px] w-full">
+                        <div className="min-h-[300px] md:min-h-[400px] border border-grey-400 w-full max-w-[100%] md:max-w-[754px] lg:max-w-[520px]">
                           <video
                             className="h-full w-full object-cover"
                             src={section.video}

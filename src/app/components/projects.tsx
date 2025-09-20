@@ -89,7 +89,9 @@ const ProjectCard = ({
         className="absolute left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center"
         style={{ bottom: "20%" }}
       >
-        <h3 className="text-[#FF4D4D] uppercase text-nowrap">{project.title}</h3>
+        <h3 className="text-[#FF4D4D] uppercase text-nowrap">
+          {project.title}
+        </h3>
       </div>
 
       {/* Arrow icon in top right */}
@@ -112,10 +114,10 @@ export default function Projects() {
   );
 
   return (
-    <div className="py-[128px]">
+    <div className="md:pt-[128px] md:pb-[128px] pt-[92px] pb-[128px] lg:px-0 px-4">
       <div className="max-w-[1148px] mx-auto">
-        <div className="grid grid-cols-2 gap-12">
-          <div>
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-12">
+          <div className="order-2 md:order-1">
             {/* Large projects grid (2x2) */}
             <div className="grid grid-cols-2 h-[280px]">
               {largeProjects.map((project) => (
@@ -138,10 +140,10 @@ export default function Projects() {
               ))}
             </div>
           </div>
-          <div className="flex justify-end px-[50px]">
+          <div className="flex md:justify-end md:px-[50px] px-0 order-1 md:order-2">
             {" "}
-            <h2 className="text-5xl lg:text-6xl  text-[#272528] ">
-              Projects built <br /> with the OO
+            <h2 className="text-[36px] lg:text-6xl  text-[#272528] ">
+              Projects built <br className="md:flex hidden" /> with the OO
             </h2>
           </div>
         </div>

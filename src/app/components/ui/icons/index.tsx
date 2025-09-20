@@ -75,13 +75,14 @@ export const Logo = ({
     </defs>
   </svg>
 );
-export const OOLogo = () => (
+export const OOLogo = ({ className = "" }: { className?: string }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="193"
     height="97"
     viewBox="0 0 193 97"
     fill="none"
+    className={className}
   >
     <g clip-path="url(#clip0_1_68)">
       <path

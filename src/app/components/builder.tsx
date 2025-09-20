@@ -221,36 +221,45 @@ contract RWAToken {
   const content = getTabContent();
 
   return (
-    <div className=" pt-[92px]">
+    <div className=" pt-[92px] md:px-0 px-4">
       <div className="max-w-[1148px] mx-auto">
         {/* Original Content */}
         <h2 className="border-b border-[#E0E0E0] pb-3 text-lg md:pb-4 md:text-4xl [&>strong]:font-normal [&>strong]:text-red">
           Participate as a <span className="text-[#FF4D4D]">UMA</span> Voter
         </h2>
-        <div className="mt-12 mb-[128px] w-full text-sm-fluid md:mb-16 md:w-[720px]  lg:mb-[96px] leading-[7rem] lg:mt-12 lg:w-[1020px] lg:text-[6rem] xl:mb-[128px] xl:mt-12">
-          <h2>Launch products with the</h2>
-          <div className="flex items-center gap-4 -mt-5">
+        <div className="mt-12  w-full text-sm-fluid md:mb-16 md:w-[720px] lg:mb-[96px] leading-[7rem] lg:mt-12 lg:w-[1020px] lg:text-[6rem] xl:mb-[128px] xl:mt-12">
+          <h2 className="hidden md:block">Launch products with the</h2>
+          <div className=" items-center gap-4 -mt-5 hidden md:flex">
             <div className="[&_svg_path]:fill-[#FF4D4D] mt-10">
-              <OOLogo />
+              <OOLogo className="w-auto h-auto" />
             </div>
             <h2>as your backbone</h2>
           </div>
+
+          {/* Mobile version - inline layout */}
+          <h2 className="text-[40px] md:hidden md:leading-[112px] leading-[1rem]">
+            Launch products with the{" "}
+            <span className="[&_svg_path]:fill-[#FF4D4D] inline-block align-middle">
+              <OOLogo className="w-20" />
+            </span>{" "}
+            as your backbone
+          </h2>
         </div>
 
         {/* New Tab Section */}
-        <div className=" bg-white mt-[127px]">
+        <div className=" bg-white md:mt-[127px] mt-10">
           {/* Top Navigation Bar */}
           <nav className=" ">
             <div className="max-w-[1440px] mx-auto">
-              <div className="flex items-center justify-between   border-b  border-[#E0E0E0]">
+              <div className="flex items-center justify-between border-b border-[#E0E0E0] overflow-x-auto">
                 {tabs.map((tab) => (
                   <button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
-                    className="flex flex-col items-center space-y-5 cursor-pointer hover:opacity-80 transition-opacity w-full"
+                    className="flex flex-col items-center space-y-2 md:space-y-5 cursor-pointer hover:opacity-80 transition-opacity w-full min-w-[60px] md:min-w-0"
                   >
                     <div
-                      className={`w-full mb-[14px] ${
+                      className={`w-full mb-2 md:mb-[14px] ${
                         activeTab === tab.id ? "w-full" : ""
                       } flex items-center justify-center ${
                         activeTab === tab.id
@@ -258,10 +267,10 @@ contract RWAToken {
                           : "text-gray-500"
                       }`}
                     >
-                      {tab.icon}
+                      <div className="scale-100 md:scale-100">{tab.icon}</div>
                     </div>
                     <span
-                      className={`text-[18px] ${
+                      className={`text-[18px] hidden md:block ${
                         activeTab === tab.id
                           ? "text-[#FF4D4D]"
                           : "text-[#afaeab]"
@@ -281,20 +290,21 @@ contract RWAToken {
           </nav>
 
           {/* Main Content */}
-          <div className="px-0 pt-[58px]">
+          <div className="px-0 md:pt-[58px] pt-12">
             <div className="max-w-[1440px] mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                {/* Left Column */}
-                <div className="">
+              <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-12 gap-6">
+                {/* Left Column - Description (hidden on mobile, shown on desktop) */}
+                <div className="hidden lg:block">
                   <h1 className="text-[60px] text-[#272528]">
                     {content.title}
                   </h1>
 
-                  <div className="text-[#272528] text-[20px] mt-3 w-[544px]">
-                    <p>{content.description}</p>
-                  </div>
+                  <p className="text-[#272528] text-[20px] md:mt-3 md:w-[544px]">
+                    {content.description}
+                  </p>
+
                   <div className="line-bg w-full h-[1px] mt-[49px]" />
-                  <div className="mt-7">
+                  <div className="md:mt-7">
                     <h3 className="text-[18px] text-[#838183]">
                       Real question used by{" "}
                       {activeTab === "governance" ? "oSnap" : "UMA Oracle"}
@@ -305,8 +315,8 @@ contract RWAToken {
                   </div>
                 </div>
 
-                {/* Right Column - Code Snippet */}
-                <div>
+                {/* Right Column - Code Snippet (shown first on mobile) */}
+                <div className="order-1 lg:order-2">
                   <div className="bg-white border border-b-0 border-[#24292E] rounded-t-lg p-6  text-base max-h-[400px] overflow-y-auto relative">
                     <div className="flex">
                       <div className="text-[#d1d4d8] mr-4 select-none">
@@ -330,12 +340,34 @@ contract RWAToken {
                     <div className="w-8 h-8 border border-[#FF4D4D] rounded-lg"></div>
                   </div>
                 </div>
+
+                {/* Mobile Description - shown only on mobile, after code */}
+                <div className="block lg:hidden order-2">
+                  <h1 className="text-[40px] md:text-[50px] text-[#272528]">
+                    {content.title}
+                  </h1>
+
+                  <p className="text-[#272528] md:text-base text-[20px] md:text-[18px] mt-3 w-full">
+                    {content.description}
+                  </p>
+
+                  <div className="line-bg w-full h-[1px] mt-[30px]" />
+                  <div className="mt-7">
+                    <h3 className="md:text-[16px] text-[18px] text-[#838183]">
+                      Real question used by{" "}
+                      {activeTab === "governance" ? "oSnap" : "UMA Oracle"}
+                    </h3>
+                    <p className="text-[#FF4D4D] md:text-base text-[18px] mt-2.5">
+                      &quot;{content.question}&quot;
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Bottom Call to Action */}
-          <div className="px-0 pb-16 pt-20">
+          <div className="px-0 md:pb-16 pt-20">
             <div className="max-w-[1440px] mx-auto text-center">
               <div className="flex items-center justify-center space-x-2"></div>
             </div>

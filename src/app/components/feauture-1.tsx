@@ -1,16 +1,46 @@
 import Image from "next/image";
 import { Boost, EnhanceSecurity, ReduceDelay } from "./ui/icons";
 
+// Features data array
+const features = [
+  {
+    id: 1,
+    title: "Reduces delays",
+    description:
+      "oSnap enables immediate decision implementation, ending waiting periods.",
+    icon: ReduceDelay,
+    gap: "gap-3",
+  },
+  {
+    id: 2,
+    title: "Enhances security",
+    description:
+      "oSnap makes the entire governance process visible on-chain, ensuring accountability.",
+    icon: EnhanceSecurity,
+    gap: "gap-3",
+  },
+  {
+    id: 3,
+    title: "Boosts transparency",
+    description:
+      "oSnap's efficient, automated system allows for seamless scaling as your DAO grows.",
+    icon: Boost,
+    gap: "gap-5",
+  },
+];
+
 export default function Feature1() {
   return (
-    <div className=" bg-[#FAFAFA] pt-[92px] h-[1080px]">
+    <div className=" bg-[#FAFAFA] md:pt-[92px] pt-16 h-auto lg:h-[1080px] pb-12 md:pb-0 lg:px-0 px-6">
       {/* Main Content */}
-      <div className="flex items-center justify-between px-12 max-w-[1148px] mx-auto">
+      <div className="flex flex-col-reverse lg:flex-row  items-center justify-between  ms:gap-0 gap-10 max-w-[1148px] mx-auto">
         {/* Left Content */}
-        <div className="flex-1 max-w-2xl pr-12">
+        <div className="flex-1 md:max-w-2xl pr-0 md:pr-12">
           {/* Introducing oSnap */}
-          <div className="flex items-center gap-2 mb-6">
-            <span className="text-gray-500 text-[24px]">Introducing</span>
+          <div className="flex items-center gap-2 md:mb-6 mb-4">
+            <span className="text-gray-500 md:text-[24px] text-[20px]">
+              Introducing
+            </span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="79"
@@ -44,57 +74,37 @@ export default function Feature1() {
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-6xl  mb-16 leading-tight">
+          <h1 className="md:text-6xl text-[30px]  md:mb-16 mb-6 ">
             DAO Governance
-            <br />
+            <br className="md:flex hidden" />
             <span className="text-red-500">made simple.</span>
           </h1>
 
           {/* Features */}
           <div className="space-y-8 mb-12">
-            {/* Feature 1 */}
-            <div className="flex items-start gap-3">
-              <ReduceDelay />
-              <div>
-                <h3 className="text-lg  text-[#272528] mb-2">Reduces delays</h3>
-                <p className="text-[#5a575b] text-base w-[472px]">
-                  oSnap enables immediate decision implementation, ending
-                  waiting periods.
-                </p>
-              </div>
-            </div>
-
-            {/* Feature 2 */}
-            <div className="flex items-start gap-3">
-              <EnhanceSecurity />
-              <div>
-                <h3 className="text-lg  text-[#272528] mb-2">
-                  Enhances security
-                </h3>
-                <p className="text-[#5a575b] text-base w-[472px] ">
-                  oSnap makes the entire governance process visible on-chain,
-                  ensuring accountability.
-                </p>
-              </div>
-            </div>
-
-            {/* Feature 3 */}
-            <div className="flex items-start gap-5">
-              <Boost />
-              <div>
-                <h3 className="text-lg  text-[#272528] mb-2">
-                  Boosts transparency
-                </h3>
-                <p className="text-[#5a575b] text-base  w-[472px]">
-                  oSnap&apos;s efficient, automated system allows for seamless
-                  scaling as your DAO grows.
-                </p>
-              </div>
-            </div>
+            {features.map((feature) => {
+              const IconComponent = feature.icon;
+              return (
+                <div
+                  key={feature.id}
+                  className={`flex md:flex-row flex-col items-start ${feature.gap}`}
+                >
+                  <IconComponent />
+                  <div>
+                    <h3 className="text-lg text-[#272528] mb-2">
+                      {feature.title}
+                    </h3>
+                    <p className="text-[#5a575b] text-base md:w-[472px]">
+                      {feature.description}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
 
           {/* CTA */}
-          <div className="flex justify-center items-center gap-4 mt-[69px]">
+          <div className="flex md:justify-center items-center gap-4 mt-[69px]">
             {" "}
             <span className="text-[#FF4D4D] text-xl ">
               Learn more about oSnap
@@ -104,12 +114,13 @@ export default function Feature1() {
         </div>
 
         {/* Right Content - Handshake Image */}
-        <div className="flex-1 flex justify-center pl-8">
+        <div className="flex-1 w-full flex justify-center pl-0 mt-8 md:-mt-5">
           <Image
             src="/handshake.webp"
             alt="Handshake"
             width={500}
             height={500}
+            className="w-full md:h-[500px] h-[270px]"
             style={{
               filter: "grayscale(100%) contrast(1.3) brightness(0.85)",
             }}
