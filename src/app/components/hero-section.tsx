@@ -1,11 +1,13 @@
 import React from "react";
 import { OOLogo, OrangeArrow } from "./ui/icons";
+import { HeroHeader } from "./hero-header";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full bg-[#272528] overflow-hidden h-screen">
+    <section className="relative w-full bg-[#272528] overflow-hidden md:h-[1313px] h-screen">
+      <HeroHeader />
       {/* Video Background */}
-      <div className="w-full md:h-[1313px] h-screen relative ">
+      <div className="w-full h-full relative ">
         {" "}
         <div className="absolute w-full bottom-0 ">
           <video
@@ -60,7 +62,7 @@ export default function HeroSection() {
       </div>
 
       {/* Explore indicator */}
-      {/* <div className="absolute md:bottom-[190px] bottom-14 left-1/2 transform -translate-x-1/2 z-20 animate-fade-in">
+      {/* <div className="absolute md:bottom-[190px] bottom-0 left-1/2 transform -translate-x-1/2 z-20 animate-fade-in">
         <div className=" flex-col gap-2 w-[48px] h-[48px] rounded-lg bg-[#252125] border border-[#FF4D4D] flex justify-center items-center">
           <OrangeArrow />
         </div>
