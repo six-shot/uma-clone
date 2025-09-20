@@ -5,7 +5,7 @@ export default function HeroSection() {
   return (
     <section className="relative w-full bg-[#272528] overflow-hidden">
       {/* Video Background */}
-      <div className="w-full h-[1313px] relative ">
+      <div className="w-full md:h-[1313px] h-screen relative ">
         {" "}
         <div className="absolute w-full bottom-0 ">
           <video
@@ -23,7 +23,7 @@ export default function HeroSection() {
       </div>
 
       {/* Hero Text Content */}
-      <div className="absolute top-[400px] left-1/2 transform -translate-x-1/2  z-20 animate-fade-in">
+      <div className="absolute md:top-[400px] top-[200px] left-1/2 transform -translate-x-1/2  z-20 animate-fade-in">
         <div className="flex flex-col gap-8 justify-center items-center h-full">
           <div className="md:p-[5px] p-1 rounded-[16px] top-bg relative overflow-hidden">
             <div className="w-10 h-10 bg-[#AFAEB2] opacity-[0.4] blur-[8px] absolute -top-[25px] -right-[15px]"></div>
