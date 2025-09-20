@@ -58,11 +58,17 @@ export default function HeroSection() {
             UMA&apos; s optimistic oracle (OO) can record any verifiable truth
             or data onto a blockchain.
           </h2>
+          <div>
+            {" "}
+            <div className=" md:hidden flex-col gap-2 w-[48px] mt-[30px] h-[48px] rounded-lg bg-[#252125] border border-[#FF4D4D] flex justify-center items-center">
+              <OrangeArrow />
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Explore indicator */}
-      <div className="absolute md:bottom-[190px] bottom-0 left-1/2 transform -translate-x-1/2 z-20 animate-fade-in">
+      <div className="absolute md:bottom-[190px] md:block hidden left-1/2 transform -translate-x-1/2 z-20 animate-fade-in">
         <div className=" flex-col gap-2 w-[48px] h-[48px] rounded-lg bg-[#252125] border border-[#FF4D4D] flex justify-center items-center">
           <OrangeArrow />
         </div>
