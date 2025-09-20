@@ -3,38 +3,55 @@ import { OOLogo, OrangeArrow } from "./ui/icons";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full bg-[#272528] overflow-hidden md:h-full min-h-[90dvh]">
+    <section className=" relative md:h-[1313px] h-screen  w-full  bg-[#272528]  overflow-hidden">
       {/* Video Background */}
-      <div className="w-full md:h-[1313px] h-full relative overflow-hidden ">
-        {" "}
-        <div className="absolute w-full bottom-0 ">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className=" mx-auto w-full h-full object-cover opacity-10 mix-blend-luminosity lg:w-[80%] "
-          >
-            <source src="/hero.webm" type="video/webm" />
-
-            <div className="w-full h-full bg-[#272528]"></div>
-          </video>
+      <div className="mt-[200px] flex justify-center items-center flex-col">
+        <div className="md:p-[5px] p-1 rounded-[16px] top-bg relative overflow-hidden">
+          <div className="w-10 h-10 bg-[#AFAEB2] opacity-[0.4] blur-[8px] absolute -top-[25px] -right-[15px]"></div>
+          <div className="w-10 h-10 bg-[#AFAEB2] opacity-[0.4] blur-[6px] absolute -bottom-[36px] -left-[18px]"></div>
+          <div className="md:h-[50px] h-[45px] md:px-[13px] px-3  rounded-xl border border-white/5 flex items-center">
+            <h5 className="md:text-[24px] text-[20px] leading-[32px] text-white  ">
+              <span className="text-[#FF4D4D] mr-[5px]">$2.05B</span>
+              Total Value Secured
+            </h5>
+          </div>
         </div>
+        <div className="text-center ">
+          <h1 className="md:text-[96px] text-[40px] md:leading-[112px] leading-[56px] text-white">
+            A decentralized
+          </h1>
+          <div className="flex items-center md:gap-4 gap-2 md:mt-2 -mt-6">
+            <h1 className="md:text-[96px] text-[40px] md:leading-[112px] leading-[56px] text-white">
+              truth
+            </h1>
+            <div className="md:mt-4 mt-2">
+              {" "}
+              <OOLogo className="w-20 md:w-auto" />
+            </div>
+            <h1 className="md:text-[96px] text-[40px] md:leading-[112px] leading-[56px] text-white">
+              machine
+            </h1>
+          </div>
+        </div>
+       
+      </div>
+      <div className="absolute w-full bottom-0 left-0 right-0">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="mx-auto w-full h-full object-cover opacity-10 mix-blend-luminosity lg:w-[80%]"
+        >
+          <source src="/hero.webm" type="video/webm" />
+          <div className="w-full h-full bg-[#272528]"></div>
+        </video>
       </div>
 
       {/* Hero Text Content */}
-      <div className="relative md:pt-[400px] pt-[160px] pb-20 flex justify-center z-20 animate-fade-in md:px-0 px-5">
+      {/* <div className="    animate-fade-in w-full max-w-full px-4">
         <div className="flex flex-col gap-8 justify-center items-center h-full">
-          <div className="md:p-[5px] p-1 rounded-[16px] top-bg relative overflow-hidden">
-            <div className="w-10 h-10 bg-[#AFAEB2] opacity-[0.4] blur-[8px] absolute -top-[25px] -right-[15px]"></div>
-            <div className="w-10 h-10 bg-[#AFAEB2] opacity-[0.4] blur-[6px] absolute -bottom-[36px] -left-[18px]"></div>
-            <div className="md:h-[50px] h-[45px] md:px-[13px] px-3  rounded-xl border border-white/5 flex items-center">
-              <h5 className="md:text-[24px] text-[20px] leading-[32px] text-white  ">
-                <span className="text-[#FF4D4D] mr-[5px]">$2.05B</span>
-                Total Value Secured
-              </h5>
-            </div>
-          </div>
+        
           <div className="text-center ">
             <h1 className="md:text-[96px] text-[40px] md:leading-[112px] leading-[56px] text-white">
               A decentralized
@@ -57,10 +74,10 @@ export default function HeroSection() {
             or data onto a blockchain.
           </h2>
         </div>
-      </div>
+      </div> */}
 
       {/* Explore indicator */}
-      <div className="relative flex justify-center pb-14 z-20 animate-fade-in">
+      <div className="absolute md:bottom-[190px] bottom-14 left-1/2 transform -translate-x-1/2 z-20 animate-fade-in">
         <div className=" flex-col gap-2 w-[48px] h-[48px] rounded-lg bg-[#252125] border border-[#FF4D4D] flex justify-center items-center">
           <OrangeArrow />
         </div>
